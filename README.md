@@ -9,4 +9,4 @@ run cd/calc
 then 
 
 
-run test command on terminal
+run go test command on terminal
