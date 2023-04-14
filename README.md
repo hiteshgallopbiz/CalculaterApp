@@ -5,7 +5,8 @@
 For testing the cases 
 run cd/calc
 
+
 then 
 
 
-run test run command
+run test command on terminal
