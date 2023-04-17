@@ -1,6 +1,7 @@
 package main
 
 import (
+	abc "calc/abs"
 	"fmt"
 )
 
@@ -30,6 +31,7 @@ func main() {
 	default:
 		fmt.Println("Wrong option try with +, -, / and *")
 	}
+	abc.AbCheck()
 
 }
 
