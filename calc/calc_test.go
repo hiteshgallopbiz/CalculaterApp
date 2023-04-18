@@ -6,7 +6,7 @@ import (
 
 func TestAddition(t *testing.T) {
 	exp := 8
-	res := Addition(5, 3)
+	res := .Addition()
 	if res != exp {
 		t.Errorf("%d was expect but got %d .\n", exp, res)
 	}

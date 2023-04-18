@@ -1,57 +1,60 @@
 package main
 
 import (
-	abc "calc/abs"
 	"fmt"
 )
 
-func main() {
+type Input struct {
+	num1 int
+	num2 int
+}
 
-	var num1, num2 int
+func (data Input) Addition() int {
+	return data.num1 + data.num2
+}
+
+func (data Input) Substraction() int {
+	return data.num1 - data.num2
+
+}
+
+func (data Input) Multiplication() int {
+	return data.num1 * data.num2
+
+}
+
+func (data Input) Division() int {
+	return data.num1 / data.num2
+
+}
+func main() {
 	var choice string
 
+	data := Input{
+		num1: 10,
+		num2: 5,
+	}
+
 	fmt.Println("Enter first num")
-	fmt.Scan(&num1)
+	fmt.Scan(&data.num1)
 
 	fmt.Println("Enter your operater")
 	fmt.Scan(&choice)
 
 	fmt.Println("Enter second num")
-	fmt.Scan(&num2)
+	fmt.Scan(&data.num2)
 
 	switch choice {
 	case "+":
-		fmt.Printf("Addition: %d \n", Addition(num1, num2))
+		fmt.Printf("Addition: %d \n", data.Addition())
 	case "-":
-		fmt.Printf("Difference: %d \n", Substraction(num1, num2))
+		fmt.Printf("Difference: %d \n", data.Substraction())
 	case "*":
-		fmt.Printf("Product: %d \n", Multiplication(num1, num2))
+		fmt.Printf("Product: %d \n", data.Multiplication())
 	case "/":
-		fmt.Printf("Division: %d \n", Division(num1, num2))
+		fmt.Printf("Division: %d \n", data.Division())
 	default:
 		fmt.Println("Wrong option try with +, -, / and *")
 	}
-	abc.AbCheck()
-
-}
-
-func Addition(num1, num2 int) int {
-	result := num1 + num2
-	return result
-
-}
-
-func Substraction(num1, num2 int) int {
-	return num1 - num2
-
-}
-
-func Multiplication(num1, num2 int) int {
-	return num1 * num2
-
-}
-
-func Division(num1, num2 int) int {
-	return num1 / num2
 
 }
